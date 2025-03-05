@@ -1,0 +1,8 @@
+pandas
+numpy
+torch==2.0.0 -f https://download.pytorch.org/whl/cu117/torch_stable.html
+tqdm
+pyarrow
+fastparquet
+scipy
+sentence-transformers==3.0.1
