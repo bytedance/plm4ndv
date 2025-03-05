@@ -1,3 +1,5 @@
+# Copyright (c) 2024 Bytedance Ltd. and/or its affiliates
+# SPDX-License-Identifier: MIT
 import os
 from extract_parquet import makedirs
 import pickle

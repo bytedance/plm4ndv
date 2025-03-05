@@ -1,3 +1,5 @@
+# Copyright (c) 2024 Bytedance Ltd. and/or its affiliates
+# SPDX-License-Identifier: MIT
 import os
 import pyarrow as pa
 import pandas as pd
