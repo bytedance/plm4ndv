@@ -1,6 +1,23 @@
 # Introduction
 
-This repository contains the implementation of **PLM4NDV**. We provide details in our paper, including but not limited to the train/validation/test dataset splits, preprocessed data, semantic embedding, and model training. You can obtain the results presented in our paper by following the instructions below.
+This repository contains the implementation of **PLM4NDV**. We provide details in our paper, including but not limited to the train/validation/test dataset splits, preprocessed data, semantic embedding, and model training. You can obtain the results presented in our paper by following the instructions below
+
+> The paper is publicly available at [arxiv](https://arxiv.org/pdf/2504.00608).
+>
+> If you find our work useful, please cite the paper:
+
+```
+@article{xu2025plm4ndv,
+  title={PLM4NDV: Minimizing Data Access for Number of Distinct Values Estimation with Pre-trained Language Models},
+  author={Xu, Xianghong and He, Xiao and Zhang, Tieying and Zhang, Lei and Shi, Rui and Chen, Jianjun},
+  journal={Proceedings of the ACM on Management of Data},
+  volume={3},
+  number={3},
+  pages={1--28},
+  year={2025},
+  publisher={ACM New York, NY, USA}
+}
+```
 
 # Instruction
 
