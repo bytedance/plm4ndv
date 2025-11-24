@@ -5,4 +5,5 @@ tqdm
 pyarrow
 fastparquet
 scipy
+transformers=4.36.2
 sentence-transformers==3.0.1

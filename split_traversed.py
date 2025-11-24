@@ -24,22 +24,27 @@ def split_data_file(processed_files):
 def dedup_content(file_list, existing_set):
     dedup_cnt = 0
     content = []
+    sample_list= []
     for file in file_list:
         file_path = os.path.join(pickle_root_path, file)
         with open(file_path, 'rb') as f:
             file_content = pickle.load(f)
         content_list = file_content['content_list']
-
-        for table_content in content_list:
-            for col_content in table_content:
-                if col_content not in existing_set:
-                    existing_set.add(col_content)
-                    content.append(col_content)
-                else:
-                    dedup_cnt += 1
-    print(dedup_cnt)
-    print(f'nun of content {len(existing_set)}')
-    return existing_set, content
+        filtered_sample_list = file_content['filtered_sample_list']
+        for i, table_content in enumerate(content_list):
+            if ','.join(table_content) not in existing_set:
+                existing_set.add(','.join(table_content))
+                content.append(table_content)
+                sample_list.append(filtered_sample_list[i])
+            else:
+                dedup_cnt += 1
+    print('duplicate cnt:', dedup_cnt)
+    print(f'nun of tables {len(content)}')
+    save_dict = {
+        'content': content,
+        'sample_list': sample_list
+    }
+    return existing_set, save_dict
 
 if __name__ == '__main__':
     pkl_files = os.listdir(pickle_root_path)

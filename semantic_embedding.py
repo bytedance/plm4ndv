@@ -9,7 +9,7 @@ from collections import Counter
 
 current_path = os.path.dirname(os.path.abspath(__file__))
 
-split_root_path = os.path.join(current_path, 'data/split_table')
+split_root_path = os.path.join(current_path, 'data/split')
 save_root_path = os.path.join(current_path, f'data/embedding')
 makedirs(save_root_path)
 # ! set PLM path
